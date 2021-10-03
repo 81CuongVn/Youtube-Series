@@ -8,6 +8,11 @@
     "autorole": {
         "roleid" : "850155802518093834",
         "toggle" : true 
+    },
+
+    "suggestion": {
+        "channelid" : "856523315438813184",
+        "toggle" : true
     }
 
 }
