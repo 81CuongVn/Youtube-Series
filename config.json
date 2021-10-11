@@ -13,6 +13,13 @@
     "suggestion": {
         "channelid" : "856523315438813184",
         "toggle" : true
-    }
+    },
 
+    "addrole": {
+        "toggle" : true
+    },
+
+    "removerole": {
+        "toggle" : true
+    }
 }

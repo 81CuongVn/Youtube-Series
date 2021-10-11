@@ -1,5 +1,3 @@
-let config = require('../config.json');
-
 module.exports = {
     convertChannel(guild, channel) {//Takes a channel id and converts it to a channel
         channel = channel.replace("<#", "")
@@ -13,9 +11,16 @@ module.exports = {
         if (category) return category;
         else return false;
     },
+    convertMember(guild, member) {//Takes a member id and converts it to a member
+        member = member.toString().replace("<@", "")
+        member = member.replace(">", "")
+        member = guild.members.cache.find(c => c.id == member)
+        if (member) return member;
+        else return false;
+    },
     convertRole(guild, role) { //Takes a role id and converts it to a role
-        role = role.replace("<@&","")
-        role = role.replace(">","")    
+        role = role.toString().replace("<@&","")
+        role = role.replace(">","")
         role = guild.roles.cache.find(c => c.id == role)
         if (role) return role;
         else return false;

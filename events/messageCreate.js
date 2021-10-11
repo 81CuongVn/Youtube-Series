@@ -25,6 +25,7 @@ module.exports = async (client, message) => {
         convertChannel,
         convertCategory,
         convertRole,
+        convertMember,
     } = require(`${process.cwd()}/utils/functions`);
     const Calls = require(`${process.cwd()}/database/monk`);
     
@@ -36,6 +37,7 @@ module.exports = async (client, message) => {
     client.convertChannel = convertChannel;
     client.convertCategory = convertCategory;
     client.convertRole = convertRole;
+    client.convertMember = convertMember;
 
     let prefix = config.defaults.prefix
     if (message.author.bot) return;
